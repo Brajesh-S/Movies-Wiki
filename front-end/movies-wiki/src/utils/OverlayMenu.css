@@ -1,0 +1,127 @@
+/* The Overlay (background) */
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-right: 45px;
+  }
+ 
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: grey;
+    background-color: transparent;
+    
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+    
+ 
+@media only screen and (max-width: 768px) {
+  .overlay .closebtn {
+    top: 10px;
+    right: 20px;
+    font-size: 16px;
+  }
+}
+
+
+.movie-name {
+  color: rgba(255, 252, 252, 0.892);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight:500;
+  
+}
+.video-container {
+  position: relative; 
+}
+.arrows {
+  
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center arrows horizontally and vertically */
+  width: 70%; /* Span the entire width of the video */
+  cursor: pointer;
+  justify-content: space-between; /* Distribute arrows evenly */
+  font-size: larger;
+}
+
+.arrow-left,
+.arrow-right {
+  color: grey;
+  transform: translateY(-50%); /* Center vertically within .arrows container */
+}
+
+@media screen and (max-width: 768px) {
+  .arrows {
+    font-size: medium; /* Adjust the font size as needed for smaller screens */
+  }
+
+  .arrow-left,
+  .arrow-right {
+    font-size: 3vw;
+  }
+
+  .arrow-left {
+    left: 3vw;
+  }
+
+  .arrow-right {
+    right: 3vw;
+  }
+}
+
+.embed.hide{
+  display: none;
+}
+
+.embed.show{
+  display: inline-block;
+}
+.dots{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  cursor: pointer;
+  
+}
+
+.dots .dot {
+  padding: 3px 9px;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+  color: rgba(227, 227, 227, 0.866);
+  font-size: 17px;
+  font-weight: 600;
+  margin: 5px;
+}
+
+.dots .dot.active{
+  border-color: rgba(255, 1, 1, 0.892);
+}
+
