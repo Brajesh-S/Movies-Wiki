@@ -15,7 +15,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-    origin:["http://localhost:3001"],
+    origin:["https://courageous-crow-flip-flops.cyclic.app"],
     methods:['POST' , 'GET'],
     credentials: true
 })); 
