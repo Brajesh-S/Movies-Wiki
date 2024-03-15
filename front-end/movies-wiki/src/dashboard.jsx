@@ -122,7 +122,7 @@ const Dashboard = () => {
     console.log(movieTitle,"in handlewatchtrailerclick function")
 
     try {
-      const response = await axios.get(`http://localhost:3000/api/trailers/${media_type}/${id}`);
+      const response = await axios.get(`http://localhost:3001/api/trailers/${media_type}/${id}`);
   
       const trailers = response.data;
       console.log('Trailers:', trailers);
