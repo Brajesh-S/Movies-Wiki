@@ -39,7 +39,7 @@ export const Login = (props) => {
 
       console.log('Sending user data:', userData);
       const response = await axios.post(
-        'https://courageous-crow-flip-flops.cyclic.app/api/auth/login',
+        'http://localhost:3000/api/auth/login',
         userData,
         {
           headers: {

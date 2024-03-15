@@ -1,7 +1,7 @@
 const express = require('express'); 
 const app = express();
 const cors = require('cors');
-
+const path = require('path')
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const authRoute = require("./back-end/routes/auth");
@@ -15,7 +15,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-    origin:["https://courageous-crow-flip-flops.cyclic.app"],
+    origin:["http://localhost:3001"],
     methods:['POST' , 'GET'],
     credentials: true
 })); 
@@ -36,7 +36,10 @@ mongoose
         
         app.use(errorHandler)
         
-
+        app.use(express.static(path.join(__dirname, "./front-end/movies-wiki/build")))
+        app.get("/", (req, res)=>{
+            res.sendFile(path.join(__dirname, "/front-end/movies-wiki/build/index.html"))
+        });
        
                                                                   
         const port = process.env.PORT || 3000;
