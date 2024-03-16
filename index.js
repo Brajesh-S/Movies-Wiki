@@ -15,7 +15,7 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-    origin:["http://localhost:3001"],
+    origin:["http://localhost:3000","http://localhost:60765 ","https://movies-wiki.onrender.com/"],
     methods:['POST' , 'GET'],
     credentials: true
 })); 
