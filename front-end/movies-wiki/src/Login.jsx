@@ -37,17 +37,20 @@ export const Login = (props) => {
       setIsLoading(true); // Circular progress
       setLoginError(null); // Clear previous alert
 
-      console.log('Sending user data:', userData);
+      // console.log('Sending user data:', userData);
       const response = await axios.post(
         'http://localhost:3000/api/auth/login',
         userData,
         {
           headers: {
             'Content-Type': 'application/json',
+            
           },
         }
-      );
-      console.log(response);
+      ).catch(error => {
+        console.error('Request failed:', error);
+      });
+      console.log(response.data);
 
       if (response.status === 200) {
         const responseData = response.data;

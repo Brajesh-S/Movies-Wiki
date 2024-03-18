@@ -15,8 +15,9 @@ dotenv.config();
 app.use(express.json());
 
 app.use(cors({
-    origin:["http://localhost:3000","http://localhost:60765 ","https://movies-wiki.onrender.com/"],
-    methods:['POST' , 'GET'],
+    origin:["http://localhost:3001","http://localhost:60765","https://movies-wiki.onrender.com/","*"],
+    methods:['POST' , 'GET', "OPTIONS"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 })); 
      
@@ -37,7 +38,7 @@ mongoose
         app.use(errorHandler)
         
         app.use(express.static(path.join(__dirname, "./front-end/movies-wiki/build")))
-        app.get("/", (req, res)=>{
+        app.get("*", (req, res)=>{
             res.sendFile(path.join(__dirname, "./front-end/movies-wiki/build/index.html"))
         });
        
