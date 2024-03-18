@@ -39,7 +39,7 @@ export const Login = (props) => {
 
       // console.log('Sending user data:', userData);
       const response = await axios.post(
-        'http://localhost:3000/api/auth/login',
+        '/api/auth/login',
         userData,
         {
           headers: {
@@ -47,9 +47,7 @@ export const Login = (props) => {
             
           },
         }
-      ).catch(error => {
-        console.error('Request failed:', error);
-      });
+      )
       console.log(response.data);
 
       if (response.status === 200) {

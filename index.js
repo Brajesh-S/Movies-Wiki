@@ -39,6 +39,7 @@ mongoose
         
         app.use(express.static(path.join(__dirname, "./front-end/movies-wiki/build")))
         app.get("*", (req, res)=>{
+            console.log("here");
             res.sendFile(path.join(__dirname, "./front-end/movies-wiki/build/index.html"))
         });
        
