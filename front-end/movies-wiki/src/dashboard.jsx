@@ -61,7 +61,7 @@ const Dashboard = () => {
     
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/movies/popular?page=${currentPage}`, {
+        const response = await axios.get(`/api/movies/popular?page=${currentPage}`, {
           timeout: 1000 
         });   
 
@@ -95,7 +95,7 @@ const Dashboard = () => {
   
 
     axios
-      .get('http://localhost:3000/api/search', {
+      .get('/api/search', {
         params: {
           query: searchTerm,
         },
@@ -122,7 +122,7 @@ const Dashboard = () => {
     console.log(movieTitle,"in handlewatchtrailerclick function")
 
     try {
-      const response = await axios.get(`http://localhost:3001/api/trailers/${media_type}/${id}`);
+      const response = await axios.get(`/api/trailers/${media_type}/${id}`);
   
       const trailers = response.data;
       console.log('Trailers:', trailers);

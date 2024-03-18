@@ -31,7 +31,7 @@ export const Register = () => {
     setRegisterError(null); //error alert
     setRegisterSuccess(null); //success alert
 
-    axios.post('http://localhost:3000/api/auth/register', userData)
+    axios.post('/api/auth/register', userData)
       .then(response => {
         console.log(response.data);
         setRegisterSuccess('Registration is successful. ');//success alert
