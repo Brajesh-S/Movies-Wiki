@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-const validateInput = require('../../../shared/middlewares/validateInput');
+const validateInput = require('../../shared/middlewares/validateInput');
 
 
 const loginRequest = [
