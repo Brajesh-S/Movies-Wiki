@@ -32,7 +32,7 @@ export const Register = () => {
     setRegisterSuccess(null);
 
     axios
-      .post("/api/auth/register", userData)
+      .post("https://movies-wiki.onrender.com/api/auth/register", userData)
       .then((response) => {
         setRegisterSuccess("Registration is successful. ");
       })
