@@ -16,9 +16,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
-      "https://movies-wiki.onrender.com/"
+      "https://movies-wiki.onrender.com"
     ],
     methods: ["POST", "GET", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -30,7 +28,7 @@ mongoose
   .set("strictQuery", false)
   .connect(process.env.MONGO_URL)
   .then(() => {
-    
+
     app.use("/api/auth", authRoute);
     app.use("/api/movies", moviesRoute);
     app.use("/api/search", searchRoute);

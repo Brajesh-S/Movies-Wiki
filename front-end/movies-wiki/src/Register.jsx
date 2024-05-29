@@ -32,7 +32,7 @@ export const Register = () => {
     setRegisterSuccess(null);
 
     axios
-      .post("http://localhost:3001/api/auth/register", userData)
+      .post("/api/auth/register", userData)
       .then((response) => {
         setRegisterSuccess("Registration is successful. ");
       })

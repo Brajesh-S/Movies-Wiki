@@ -38,7 +38,7 @@ export const Login = () => {
       setLoginError(null);
 
       const response = await axios.post(
-        "http://localhost:3001/api/auth/login",
+        "/api/auth/login",
         userData,
         {
           headers: {
