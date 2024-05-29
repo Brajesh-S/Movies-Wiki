@@ -38,7 +38,7 @@ export const Login = () => {
       setLoginError(null);
 
       const response = await axios.post(
-        "/api/auth/login",
+        "http://localhost:3001/api/auth/login",
         userData,
         {
           headers: {
@@ -112,7 +112,7 @@ export const Login = () => {
             <Stack
               sx={{
                 width: "100%",
-                marginBottom: "-20px",
+                marginBottom: "6px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",

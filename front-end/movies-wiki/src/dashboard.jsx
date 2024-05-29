@@ -77,7 +77,7 @@ const Dashboard = () => {
     try {
       if (!searchTerm.trim()) {
         const response = await axios.get(
-          `/api/movies/popular?page=${currentPage}`,
+          `http://localhost:3001/api/movies/popular?page=${currentPage}`,
           {
             headers: {
               Authorization: `Bearer ${authData.token}`,
@@ -87,7 +87,7 @@ const Dashboard = () => {
         setMovies(response.data);
         setTotalPages(response.data.page);
       } else {
-        const response = await axios.get("/api/search", {
+        const response = await axios.get("http://localhost:3001/api/search", {
           headers: {
             Authorization: `Bearer ${authData.token}`,
           },
@@ -117,7 +117,7 @@ const Dashboard = () => {
   const handleWatchTrailerClick = async (id, media_type, movieTitle) => {
     try {
       const response = await axios.get(
-        `/api/trailers/${media_type}/${id}`,
+        `http://localhost:3001/api/trailers/${media_type}/${id}`,
         {
           headers: {
             Authorization: `Bearer ${authData.token}`,

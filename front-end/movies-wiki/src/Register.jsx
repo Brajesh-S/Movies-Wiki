@@ -32,7 +32,7 @@ export const Register = () => {
     setRegisterSuccess(null);
 
     axios
-      .post("/api/auth/register", userData)
+      .post("http://localhost:3001/api/auth/register", userData)
       .then((response) => {
         setRegisterSuccess("Registration is successful. ");
       })
@@ -116,7 +116,7 @@ export const Register = () => {
             <Stack
               sx={{
                 width: "100%",
-                marginBottom: "-10px",
+                marginBottom: "5px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -127,7 +127,7 @@ export const Register = () => {
                 sx={{
                   color: "red",
                   border: "1px solid #grey",
-                  borderRadius: "10px",
+                  borderRadius: "5px",
                   textAlign: "center",
                 }}
                 severity="error"
