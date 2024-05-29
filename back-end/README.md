@@ -1,14 +1,14 @@
 
 Functionalities:
 
-1)Login
+User Authentication: Secure login/logout with JWT and RSA256 encryption.
 
-2)Displaying movies based on release date from Public API
+External API Integration: Display popular movies/TV shows in a visually appealing carousel.
 
-3)Search(fetching movies by making API call)
+Search Functionality: Find specific titles using a search bar.
 
-4)User watchlist(Add & Delete movies) 
+Interactive Trailers: Watch trailers in an engaging carousel format.
 
-5)Storing watchlist in MongoDB
+Pagination: Efficiently handle large datasets for optimal performance.
 
 
