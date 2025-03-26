@@ -1,4 +1,4 @@
-const User = require("../../models/User");
+const User = require("../../../models/User");
 
 const checkEmailUniqueness = async (req, res, next) => {
   try {

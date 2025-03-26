@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
-const verifyToken = require("../shared/verifyToken");
+const verifyToken = require("../middlewares/validation/validateInput");
 const TMDB_API_ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 
 const IMG_URL = "https://image.tmdb.org/t/p/";

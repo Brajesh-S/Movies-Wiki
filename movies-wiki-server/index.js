@@ -8,7 +8,7 @@ const authRoute = require("./routes/auth");
 const moviesRoute = require("./routes/movies");
 const searchRoute = require("./routes/searchMovies");
 const trailerRoute = require("./routes/getTrailer");
-const errorHandler = require("./shared/middlewares/errorHandler");
+const errorHandler = require("./middlewares/errorHandling/errorHandler");
 
 dotenv.config();
 app.use(express.json());
@@ -35,19 +35,17 @@ mongoose
     app.use("/api/trailers", trailerRoute);
 
       app.use(
-      express.static(path.join(__dirname, "../front-end/movies-wiki/build"))
+      express.static(path.join(__dirname, "../client/movies-wiki/build"))
     );
     app.get("*", (req, res) => {
       res.sendFile(
-        path.join(__dirname, "../front-end/movies-wiki/build/index.html")
+        path.join(__dirname, "../client/movies-wiki/build/index.html")
       );
     });
 
-
-
     app.use(errorHandler);
 
-    const port = process.env.PORT || 3001;
+    const port = process.env.PORT || 3000;
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
     });

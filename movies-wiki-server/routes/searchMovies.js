@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
-const verifyToken = require("../shared/verifyToken");
+const verifyToken = require("../middlewares/auth/verifyToken");
 const TMDB_API_ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 
 function generateJSONForMovies(movies) {

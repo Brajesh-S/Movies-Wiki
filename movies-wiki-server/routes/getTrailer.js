@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const router = express.Router();
-const verifyToken = require("../shared/verifyToken");
+const verifyToken = require("../middlewares/validation/validateInput");
 const TMDB_API_ACCESS_TOKEN = process.env.TMDB_API_ACCESS_TOKEN;
 
 router.get("/movie/:id", verifyToken, async (req, res) => {
@@ -26,7 +26,6 @@ router.get("/tv/:id", verifyToken, async (req, res) => {
   }
 });
 
-// Function to fetch trailers using Axios
 async function fetchTrailers(media_type, id) {
   const url = `https://api.themoviedb.org/3/${media_type}/${id}/videos?language=en-US`;
   const headers = {

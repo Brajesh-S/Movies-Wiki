@@ -6,12 +6,12 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const errorHandler = require("../shared/middlewares/errorHandler");
-const registerRequest = require("../models/requests/registerRequest");
-const loginRequest = require("../models/requests/loginRequest");
+const errorHandler = require("../middlewares/errorHandling/errorHandler");
+const registerRequest = require("../middlewares/validation/authValidation/registerRequest");
+const loginRequest = require("../middlewares/validation/authValidation/loginRequest");
 const dotenv = require("dotenv");
-const checkEmailUniqueness = require("../shared/middlewares/emailValidation");
-const checkUsernameUniqueness = require("../shared/middlewares/nameValidity");
+const checkEmailUniqueness = require("../middlewares/validation/userValidations/emailUniqueness");
+const checkUsernameUniqueness = require("../middlewares/validation/userValidations/usernameUniqueness");
 dotenv.config();
 
 // Construct paths to RSA key files using __dirname
