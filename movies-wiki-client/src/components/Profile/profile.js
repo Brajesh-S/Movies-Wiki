@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import { useAuth } from "./authContext";
+import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 export default function AccountMenu({ position }) {

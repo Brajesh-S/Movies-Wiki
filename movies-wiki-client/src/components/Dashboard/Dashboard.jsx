@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import "./dashboard.css";
-import { roundVoteAverage } from "./utils/roundVoteAverage";
-import PlayButton from "./utils/playButton";
-import OverlayMenu from "./utils/OverlayMenu";
-import VideoPlayer from "./utils/VideoPlayer";
-import AccountMenu from "./profile";
+import { roundVoteAverage } from "../../utils/roundVoteAverage";
+import PlayButton from "../WatchTrailer/watchTrailer";
+import OverlayMenu from "../Overlay/OverlayMenu";
+import VideoPlayer from "../Profile/profile";
+import AccountMenu from "../Profile/profile";
 import Lottie from "lottie-react";
-import n1 from "./n1.json";
-import { useAuth } from "./authContext";
+import n1 from "../../assets/n1.json";
+import { useAuth } from "../../context/authContext";
 
 const Movie = ({
   title,
@@ -77,7 +77,7 @@ const Dashboard = () => {
     try {
       if (!searchTerm.trim()) {
         const response = await axios.get(
-          `https://movies-wiki.onrender.com/api/movies/popular?page=${currentPage}`,
+          `http://localhost:3000/api/movies/popular?page=${currentPage}`,
           {
             headers: {
               Authorization: `Bearer ${authData.token}`,
@@ -87,7 +87,7 @@ const Dashboard = () => {
         setMovies(response.data);
         setTotalPages(response.data.page);
       } else {
-        const response = await axios.get("https://movies-wiki.onrender.com/api/search", {
+        const response = await axios.get("http://localhost:3000/api/search", {
           headers: {
             Authorization: `Bearer ${authData.token}`,
           },
@@ -117,7 +117,7 @@ const Dashboard = () => {
   const handleWatchTrailerClick = async (id, media_type, movieTitle) => {
     try {
       const response = await axios.get(
-        `https://movies-wiki.onrender.com/api/trailers/${media_type}/${id}`,
+        `http://localhost:3000/api/trailers/${media_type}/${id}`,
         {
           headers: {
             Authorization: `Bearer ${authData.token}`,

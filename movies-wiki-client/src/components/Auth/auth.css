@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .auth-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    background-color: rgba(23, 23, 23, 0.133);
+    opacity: 0.9;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid rgba(255, 255, 255, 0.292);
+    backdrop-filter: blur(8px);
+    margin: auto;
+    color: #ffffff;
+  }
+
+  .login-logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: -21%;
+  }
+  
+  .login-logo img {
+    width: 100%;
+    margin-bottom: -10%;
+    
+  }
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+    padding-bottom: 1.3rem;
+    width: 80%;
+    gap: 1px;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: -3px;
+    text-align: left;
+    padding: 0.25rem 0;
+  }
+  
+  .form-input {
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: all 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+  
+  .auth-button {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: rgb(43, 43, 43);
+    font-weight: 200;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+   
+  }
+  
+  .auth-button:hover {
+    background-color: #9d9e9f;
+    transform: translateY(-1px);
+  }
+  
+  .auth-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  /* Toggle Links */
+  .toggle-button {
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+  
+  .toggle-button:hover {
+    background-color: transparent;
+    color: #c1c1c1;
+  }
+  
+  .auth-alert {
+    position: relative;
+    top: 10px;
+    
+  }
+  
+  .error-alert {
+    background-color: rgba(255, 76, 76, 0.15);
+    border: 1px solid #ff4c4c;
+    color: #ff4c4c;
+    
+  }
+  
+  .success-alert {
+    background-color: rgba(76, 175, 80, 0.15);
+    border: 1px solid #4caf50;
+    color: #4caf50;
+  }
+  
+  @media (max-width: 992px) {
+    .auth-wrapper {
+      padding: 1.5rem;
+    }
+    
+    .auth-form-container {
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .auth-wrapper {
+      padding: 1rem;
+    }
+    
+    .auth-form-container {
+      max-width: 350px;
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .auth-wrapper {
+      padding: 0.5rem;
+    }
+    
+    .auth-form-container {
+      max-width: 100%;
+      border-radius: 10px;
+      padding: 1.2rem;
+    }
+    
+    .auth-form {
+      padding-bottom: 1rem;
+    }
+  }

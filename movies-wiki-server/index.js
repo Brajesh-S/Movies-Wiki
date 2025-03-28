@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://movies-wiki.onrender.com"
+      "http://localhost:3000",
+      "http://localhost:3001"
     ],
     methods: ["POST", "GET", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -35,11 +36,11 @@ mongoose
     app.use("/api/trailers", trailerRoute);
 
       app.use(
-      express.static(path.join(__dirname, "../client/movies-wiki/build"))
+      express.static(path.join(__dirname, "../movies-wiki-client/build"))
     );
     app.get("*", (req, res) => {
       res.sendFile(
-        path.join(__dirname, "../client/movies-wiki/build/index.html")
+        path.join(__dirname, "../movies-wiki-client/build/index.html")
       );
     });
 

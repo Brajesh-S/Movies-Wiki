@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StyledEngineProvider } from "@mui/material/styles";
-import { AuthProvider } from "./authContext";
-
-import { Login } from "./Login";
-import { Register } from "./Register";
-import Dashboard from "./dashboard";
+import { AuthProvider } from "./context/authContext";
+import { Login } from "./components/Auth/Login";
+import { Register } from "./components/Auth/register";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() { 
   return (
