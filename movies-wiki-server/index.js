@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://movies-wiki.onrender.com/",
+      "https://movies-wiki.onrender.com",
       "http://localhost:3001"
     ],
     methods: ["POST", "GET", "OPTIONS"],

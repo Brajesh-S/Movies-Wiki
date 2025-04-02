@@ -26,7 +26,7 @@ export const Register = () => {
 
     try {
       const response = await axios.post(
-        "https://movies-wiki.onrender.com/api/auth/register",
+        "https://movies-wiki.onrender.comapi/auth/register",
         formData
       );
       
@@ -46,6 +46,7 @@ export const Register = () => {
   };
 
   return (
+    <div className="auth-wrapper">
     <div className="auth-form-container">
       <div className="login-logo">
         <img src={require("../../assets/Image4.png")} alt="App Logo" />
@@ -139,6 +140,7 @@ export const Register = () => {
       >
         Already have an account? Login here.
       </button>
+    </div>
     </div>
   );
 };

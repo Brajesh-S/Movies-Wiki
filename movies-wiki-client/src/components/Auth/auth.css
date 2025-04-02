@@ -9,9 +9,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100%;
     padding: 2rem;
-    background-size: cover;
-    background-position: center;
   }
   
   .auth-form-container {
@@ -20,7 +19,7 @@
     align-items: center;
     width: 100%;
     max-width: 450px;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: rgba(23, 23, 23, 0.133);
     opacity: 0.9;
     border-radius: 25px;
@@ -35,12 +34,13 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: -21%;
+    margin-top: -23%;
+
   }
   
   .login-logo img {
     width: 100%;
-    margin-bottom: -10%;
+    margin-bottom: -15%;
     
   }
 
@@ -49,9 +49,9 @@
     flex-direction: column;
     justify-content: space-between;
     font-weight: 700;
-    padding-bottom: 1.3rem;
+    padding-bottom: 0.8rem;
     width: 80%;
-    gap: 1px;
+    /* gap: 1px; */
   }
   
   .form-label {
