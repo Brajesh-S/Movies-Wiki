@@ -4,7 +4,7 @@ import { StyledEngineProvider } from "@mui/material/styles";
 import { AuthProvider } from "./context/authContext";
 import { Login } from "./components/Auth/Login";
 import { Register } from "./components/Auth/register";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard";
 
 function App() { 
   return (

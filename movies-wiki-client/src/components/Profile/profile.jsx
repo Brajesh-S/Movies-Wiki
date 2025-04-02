@@ -9,6 +9,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
+import '../Dashboard/dashboard.css';
 
 export default function AccountMenu({ position }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
