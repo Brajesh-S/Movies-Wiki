@@ -15,7 +15,7 @@ const useMovies = (authToken) => {
       setError(null);
 
       const api = axios.create({
-        baseURL: 'http://localhost:3000/api',
+        baseURL: 'https://movies-wiki.onrender.com/api',
         headers: { Authorization: `Bearer ${authToken}` }
       });
 

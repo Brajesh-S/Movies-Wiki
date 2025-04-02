@@ -27,7 +27,7 @@ export const Login = () => {
       setLoginError(null);
 
       const response = await axios.post(
-        "http://localhost:3000/api/auth/login",
+        "https://movies-wiki.onrender.com/api/auth/login",
         userData,
         {
           headers: {

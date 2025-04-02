@@ -26,7 +26,7 @@ export const Register = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/register",
+        "https://movies-wiki.onrender.com/api/auth/register",
         formData
       );
       
