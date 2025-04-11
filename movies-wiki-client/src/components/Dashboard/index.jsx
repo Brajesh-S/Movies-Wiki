@@ -30,7 +30,7 @@ const Dashboard = () => {
   const handleTrailerClick = async (id, media_type, movieTitle) => {
     try {
       const response = await axios.get(
-        `https://movies-wiki.onrender.comapi/trailers/${media_type}/${id}`,
+        `https://movies-wiki.onrender.com/api/trailers/${media_type}/${id}`,
         {
           headers: {
             Authorization: `Bearer ${authData.token}`,
